@@ -1,0 +1,23 @@
+# Secrets
+.env
+
+# Virtual environments
+ragas_env/
+venv/
+.venv/
+env/
+
+# Chroma databases
+chroma_db/
+chroma_db_baseline/
+tune_full_db_0/
+tune_full_db_1/
+tune_full_db_2/
+tune_full_db_3/
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store

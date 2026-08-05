@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-Command ollama -ErrorAction SilentlyContinue)",
+      "PowerShell(ollama --version)",
+      "Bash(ollama --version)",
+      "PowerShell(Test-Path \"$env:LOCALAPPDATA\\\\Programs\\\\Ollama\\\\ollama.exe\"; Test-Path \"$env:USERPROFILE\\\\AppData\\\\Local\\\\Programs\\\\Ollama\\\\ollama.exe\")",
+      "PowerShell($env:PATH += \";$env:LOCALAPPDATA\\\\Programs\\\\Ollama\"; ollama --version)",
+      "PowerShell($env:PATH += \";$env:LOCALAPPDATA\\\\Programs\\\\Ollama\"; ollama list)",
+      "Bash(python -c ' *)",
+      "Bash(tasklist)",
+      "Bash(taskkill //PID 21672 //F)",
+      "Bash(curl -s http://localhost:11434/api/tags)",
+      "Bash(python eval/generate_testset.py)",
+      "Bash(python eval/run_eval.py)",
+      "Bash(python evaluation/accuracy.py)",
+      "Bash(./ragas_env/Scripts/python.exe -m pip show ragas datasets langchain-ollama)",
+      "Bash(./ragas_env/Scripts/python.exe evaluation/evaluate.py)",
+      "Bash(./ragas_env/Scripts/python.exe -c \"import ragas; print\\(ragas.__version__\\)\")",
+      "Bash(./ragas_env/Scripts/python.exe -c \"from ragas import experiment\")",
+      "Bash(./ragas_env/Scripts/python.exe -c \"from ragas.metrics import DiscreteMetric\")",
+      "Bash(python -c \"import json; d=json.load\\(open\\('evaluation/eval_dataset.json',encoding='utf-8'\\)\\); print\\(len\\(d\\)\\)\")",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(./ragas_env/Scripts/python.exe -m pip index versions ragas)",
+      "Bash(./ragas_env/Scripts/python.exe -m pip install --upgrade ragas)",
+      "Bash(./ragas_env/Scripts/python.exe -c ' *)",
+      "Bash(taskkill //PID 11136 //F)",
+      "Bash(taskkill //PID 18720 //F)"
+    ]
+  }
+}

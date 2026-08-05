@@ -1,0 +1,155 @@
+id,category,question,answer
+1,General,What is the ADMV1455?,"A highly integrated microwave downconverter from Analog Devices, optimized for wideband radio designs operating over the 17.7GHz to 55GHz RF frequency range."
+2,General,What RF frequency range does the ADMV1455 cover?,17.7GHz to 55GHz.
+3,General,What LO input frequency range does the ADMV1455 accept?,8.85GHz to 27.5GHz.
+4,General,How does the ADMV1455 generate the required 17.7GHz to 55GHz LO drive signal for the mixer?,"The LO signal chain uses internal amplifiers plus an internal 2x frequency multiplier, along with programmable harmonic-rejection filters and phase-adjust circuitry, to generate the 17.7GHz to 55GHz signal that drives the I/Q mixer."
+5,General,"How many RF signal chains does the ADMV1455 have, and what frequency ranges do they cover?",Two switch-selectable RF signal chains: one covering 17.7GHz to 34GHz (low band) and one covering 30GHz to 55GHz (high band).
+6,General,What are the two frequency translation (output) modes of the ADMV1455?,A single-ended IF output mode (2GHz to 12GHz) and a differential baseband I/Q output mode (DC to 8GHz).
+7,General,What is the frequency range of the single-ended IF output mode?,2GHz to 12GHz.
+8,General,What is the frequency range of the differential baseband I/Q output mode?,DC to 8GHz.
+9,General,"What impedance are the baseband differential outputs centered around, and why?","About 75Ω, which allows the baseband outputs to interface with either a 50Ω or 100Ω differential load impedance."
+10,General,What is included in the single-ended IF output signal path?,"An on-chip 90-degree IF hybrid, a tunable filter, and two adjustable stages of gain control."
+11,General,What features does the I/Q baseband mode include?,"A programmable internal common-mode voltage, programmable offset voltages, and programmable gain select."
+12,General,"Do the RF input, LO input, and IF output require external matching circuitry?","No. The RF input, LO input, and IF output are all single-ended and matched to 50Ω impedance, so no external matching circuitry is required."
+13,General,What is the purpose of the power detector in the ADMV1455?,It allows monitoring of the power levels at the I/Q mixer inputs.
+14,General,What is the purpose of the frequency and gain look-up tables (LUTs) in the ADMV1455?,"They allow fast switching of frequency and gain settings, addressable through the SPI or directly via the ADD_Fx and ADD_Gx ball connections, to support fast frequency-hopping applications."
+15,General,What type of SPI interface does the ADMV1455 use?,A simple SPI that can operate in either a 3-wire or 4-wire implementation.
+16,General,What operating case temperature range does the ADMV1455 support?,-40°C to +95°C.
+17,General,What package does the ADMV1455 come in?,"A 120-ball, 6mm x 6.5mm CSP_BGA package."
+18,General,What heat sinking options does the ADMV1455 BGA package support?,Heat sinking from either the top of the package or through the bottom of the printed circuit board (PCB); both methods have similar thermal performance.
+19,General,What is the purpose of the NVM factory calibration in the ADMV1455?,It minimizes part-to-part variations.
+20,General,What are the typical applications of the ADMV1455?,"Satellite payload and ground stations (SATCOM), wideband radar and electronic warfare (EW) systems, instrumentation and automatic test equipment (ATE), and millimeter-wave 5G and 6G testers."
+21,General,Who should be contacted for commercial space low (CSL) or commercial space high (CSH) qualified versions of the ADMV1455?,space@analog.com.
+22,General,"What revision of the ADMV1455 data sheet is described, and when was it released?","Revision 0, the initial version, released December 2025."
+23,Specifications,What is the RF input frequency range of the low band signal chain?,17.7GHz to 34GHz.
+24,Specifications,What is the RF input frequency range of the high band signal chain?,30GHz to 55GHz.
+25,Specifications,What is the frequency range of the internal 2x LO multiplier output?,17.7GHz to 55GHz.
+26,Specifications,What LO amplitude range is required when fLO is less than 25GHz?,-7dBm to -3dBm.
+27,Specifications,What LO amplitude range is required when fLO is 25GHz or greater?,-3dBm to 0dBm.
+28,Specifications,What is the LO phase adjustment range for image rejection control?,±20 degrees.
+29,Specifications,What is the LO phase step size?,0.6 degrees.
+30,Specifications,What is the IF amplitude step size used for image rejection optimization?,0.1dB.
+31,Specifications,What is the typical baseband output common-mode voltage range when VDD_BB = 1.8V?,0.8V to 1.1V.
+32,Specifications,What is the typical baseband output common-mode voltage range when VDD_BB = 2.5V?,0.8V to 1.5V.
+33,Specifications,What is the input power range for the on-chip power detector?,"-40dBm to -17dBm, measured at RF_IN and read out digitally via the on-chip ADC."
+34,Specifications,What is the typical return loss of the RF_IN input in the low band (17GHz to 34GHz)?,Typically -10dB.
+35,Specifications,What is the typical return loss of the RF_IN input in the high band (30GHz to 55GHz)?,Typically -8dB.
+36,Specifications,What is the typical return loss of the LO input?,Typically -8dB.
+37,Specifications,What logic supply voltage do the digital inputs and outputs of the ADMV1455 use?,1.8V logic levels.
+38,Specifications,What is the typical input high voltage (VINH) for the logic inputs?,"1.2V typical (minimum), up to 1.8V maximum."
+39,Specifications,"What is the typical output high voltage (VOH) of the logic outputs, and at what output current?",Typically 1.35V minimum at an output high current (IOH) of 8mA.
+40,Specifications,"What is the nominal voltage for each of the RF/analog supply pins such as VDD_LNA, VDD_RF, VDD_MIX, VDD_LO, VDD_IF, and VDD_BG?",1.8V nominal (1.6V to 2V range).
+41,Specifications,What voltage options does VDD_BB support?,"1.8V or 2.5V nominal, with a range of 1.6V to 2.75V."
+42,Specifications,What is the typical total supply current in IF mode with CEN high and RF Band 0 selected?,Typically 570mA from the 1.8V supplies.
+43,Specifications,What is the typical supply current when CEN is low?,Typically 65mA in IF mode.
+44,Specifications,"In IF mode, RF_IN input, high band, what is the typical conversion gain?",41dB.
+45,Specifications,"In IF mode, RF_IN input, high band, what is the typical single-sideband noise figure?",6.2dB.
+46,Specifications,"In IF mode, RF_IN input, high band, what is the typical input P1dB?",-27dBm.
+47,Specifications,"In IF mode, RF_IN input, high band, what is the typical input IP3 (100MHz tone spacing)?",-16dBm.
+48,Specifications,"In IF mode, RF_IN input, high band, what is the typical image rejection (IMRR) uncalibrated versus calibrated?","-28dBc uncalibrated, improving to -52dBc when calibrated."
+49,Specifications,"In IF mode, RF_IN input, low band, what is the typical conversion gain?",48dB.
+50,Specifications,"In IF mode, RF_IN input, low band, what is the typical single-sideband noise figure?",4.0dB.
+51,Specifications,"In IF mode, RF_IN input, low band, what is the typical image rejection (IMRR) uncalibrated versus calibrated?","-55dBc uncalibrated, improving to -80dBc when calibrated."
+52,Specifications,"What is the full DSA attenuation range at the RF_IN input in IF mode, high band?",Typically 50dB (DSA2 through DSA5 set to maximum attenuation).
+53,Specifications,What is the attenuation step size of DSA2?,6dB.
+54,Specifications,"What is the attenuation step size of DSA3, DSA4, and DSA5?",1dB each.
+55,Specifications,"What is the full DSA attenuation range at the DSA_IN input in IF mode, high band (DSA1 through DSA5)?",Typically 66dB.
+56,Specifications,What is the attenuation step size of DSA1?,1dB.
+57,Specifications,"In I/Q baseband mode, DSA_IN input, high band, what is the typical conversion gain for high gain (50Ω) and low gain (100Ω) settings?",12dB typical for the high-gain (50Ω) setting and 6dB typical for the low-gain (100Ω) setting.
+58,Specifications,"In I/Q baseband mode, DSA_IN input, high band, what is the typical input P1dB?",-7.5dBm.
+59,Specifications,"In I/Q baseband mode, DSA_IN input, high band, what is the typical baseband quadrature amplitude and phase imbalance from 0GHz to 8GHz?",Typically ±0.8dB amplitude imbalance and ±5 degrees phase imbalance.
+60,Specifications,"In I/Q baseband mode, DSA_IN input, low band, what is the typical conversion gain for high gain and low gain settings?",22.5dB typical for high gain (50Ω) and 17dB typical for low gain (100Ω).
+61,Specifications,"What test conditions are used for the IF mode, RF_IN, high band specification table?","TC = 25°C, all supply voltages = 1.8V, PRF = -45dBm, PLO = -5dBm, fRF = 49GHz, fIF = 8GHz, fLO = 41GHz (upper sideband), maximum gain, RF LPF setting = 0x00 (highest cutoff), and RF HPF setting = 0x3F (lowest cutoff)."
+62,Timing,What is the maximum SCLK frequency supported by the ADMV1455 SPI?,Up to 125MHz.
+63,Timing,What logic level does the SPI interface of the ADMV1455 use?,1.8V logic levels.
+64,Timing,What is the power supply rise time specification (t1)?,"1ms minimum to 100ms maximum, from 10% to 90% of the supply voltage."
+65,Timing,How long must you wait after supplies reach 90% before applying valid digital inputs (t2)?,A minimum of 10ns (tDIGITAL).
+66,Timing,What is the minimum RST rising edge to CS falling edge time (t3)?,10ns minimum.
+67,Timing,What is the minimum SCLK cycle time for a write operation (t5)?,10ns minimum.
+68,Timing,What is the minimum SCLK cycle time for a read operation (t5)?,20ns minimum.
+69,Timing,What is the minimum SDI data setup time (t8)?,3ns minimum.
+70,Timing,What is the minimum SDI data hold time (t9)?,2ns minimum.
+71,Timing,How long must you wait after CEN goes low before RST can go low (t23)?,"A minimum of 3µs, to allow the RF portions of the chip to power down before chip reset."
+72,Timing,What is the maximum logic inputs fall time (t26)?,10µs maximum.
+73,AbsMax,What is the absolute maximum rating for the 2.5V supply?,2.75V.
+74,AbsMax,What is the absolute maximum rating for the 1.8V supply?,2V.
+75,AbsMax,What is the absolute maximum LO input power rating?,0dBm.
+76,AbsMax,What is the maximum junction temperature (TJ) rating for the ADMV1455?,125°C.
+77,AbsMax,What is the maximum storage temperature range for the ADMV1455?,-65°C to +150°C.
+78,AbsMax,What is the operating case temperature (TC) range listed in the Absolute Maximum Ratings table?,-40°C to +95°C.
+79,AbsMax,What is the maximum power dissipation rating for the ADMV1455?,1.4W.
+80,AbsMax,What is the Moisture Sensitivity Level (MSL) rating of the ADMV1455?,"MSL3, based on IPC/JEDEC J-STD-20 classifications."
+81,AbsMax,What peak-to-average ratio does the RF input power rating assume?,10dB.
+82,AbsMax,"For the IF mode, 10 year lifetime rating with CEN low, what is the maximum RF_IN power rating?",+4dBm.
+83,AbsMax,What is the thermal resistance junction-to-case top (θJC_TOP) for the BC-120-4 package?,3.0°C/W.
+84,AbsMax,What is the thermal resistance junction-to-case bottom (θJC_BOT) for the BC-120-4 package?,2.3°C/W.
+85,AbsMax,What is the junction-to-ambient thermal resistance (θJA) for the BC-120-4 package?,24.3°C/W.
+86,AbsMax,What is the junction-to-top thermal characterization parameter (ΨJT) for the BC-120-4 package?,0.1°C/W.
+87,AbsMax,What is the junction-to-board thermal characterization parameter (ΨJB) for the BC-120-4 package?,7.3°C/W.
+88,AbsMax,What is the temperature rise from case to junction (TRISE_JC) for the BC-120-4 package based on a power map?,20°C.
+89,AbsMax,What is the HBM (human body model) ESD withstand threshold for the ADMV1455?,"750V, Class 1B."
+90,AbsMax,What is the FICDM (field induced charged device model) ESD withstand threshold for the ADMV1455?,"500V, Class C2A."
+91,AbsMax,What standard is used for the HBM ESD rating?,ANSI/ESDA/JEDEC JS-001.
+92,AbsMax,What standard is used for the FICDM ESD rating?,ANSI/ESDA/JEDEC JS-002.
+93,AbsMax,What happens if the device is operated beyond the maximum operating conditions for extended periods?,It may affect product reliability; stresses at or above the Absolute Maximum Ratings may cause permanent damage.
+94,Pinout,What package technology and pin count does the ADMV1455 use?,"A 120-ball CSP_BGA (chip scale package ball grid array), package option BC-120-4."
+95,Pinout,"What is the function of the NIC pins (A1, A12, J3, L1, L12)?","Not Internally Connected. They are not connected internally, but it is acceptable to ground them if the application requires it."
+96,Pinout,What is the function of pin B1 (DNC)?,Do Not Connect. It should not be connected to anything or grounded.
+97,Pinout,What is pin F2 used for?,"RF_IN, the RF input, which is DC-coupled and matched to 50Ω."
+98,Pinout,What is pin F11 used for?,"LO, the local oscillator input, DC-coupled and matched to 50Ω."
+99,Pinout,What is pin K5 used for?,"IF, the IF output, DC-coupled and matched to 50Ω."
+100,Pinout,Which pins provide the differential baseband I outputs?,"B7 and B8, labeled BB_IN and BB_IP."
+101,Pinout,Which pins provide the differential baseband Q outputs?,"K7 and K8, labeled BB_QN and BB_QP."
+102,Pinout,What is the differential output impedance of the baseband I/Q outputs?,"About 75Ω, internally DC-coupled, compatible with either 50Ω or 100Ω differential loads."
+103,Pinout,What is the function of pin K10 (CEN)?,"Chip Enable, active high 1.8V logic. It must be held low until all supply voltages are on and RST has been set high."
+104,Pinout,What is the function of pin K11 (RST)?,"Chip Reset, active low 1.8V logic."
+105,Pinout,What is the function of pin K12 (CS)?,"SPI Chip Select, active low 1.8V logic; it is brought low to begin a SPI transaction."
+106,Pinout,What is the function of pin H11 (SDIO)?,SPI Data Input and Output. For a 3-wire SPI implementation it is bidirectional; for a 4-wire implementation it is used only for data input.
+107,Pinout,What is the function of pin J11 (SDO)?,"SPI Data Output, used to read SPI data in a 4-wire SPI implementation. If unused, it should be left floating."
+108,Pinout,What is the function of pin J12 (SCLK)?,SPI Clock Input; data is sampled on the rising edge during writes and output data changes on the falling edge during reads.
+109,Pinout,What is the function of the H10 (LOAD) pin?,Load Synchronous Toggle. Transitioning it from low to high loads the filter and gain register contents into the working registers. It should be grounded if the LOAD feature is not used.
+110,Pinout,What is the function of the D9 (CHIP_ADD1) pin?,"Chip Address Bit 1, used in multichip systems to assign a SPI address to a device; it is internally pulled high through 15kΩ and should be grounded for single-chip implementations."
+111,Pinout,What is the function of pin B5 (DSA_IN)?,"DSA1 RF input, DC-coupled and matched to 50Ω. It can float if DSA1 is not used."
+112,Pinout,What is the function of pin D2 (DSA_OUT)?,"DSA1 RF output, DC-coupled and matched to 50Ω. It can float if DSA1 is not used."
+113,Pinout,What is the recommended decoupling for the VDD_LNA supply pin?,0.01µF and 1µF decoupling capacitors placed close to the pin.
+114,Pinout,What are the ADD_F0 through ADD_F4 pins used for?,"Frequency LUT address bits, used to set the look-up table address pointer for frequency-hopping applications."
+115,Pinout,What are the ADD_G0 through ADD_G5 pins used for?,"Gain LUT address bits, used to set the gain look-up table address pointer."
+116,Pinout,What is the function of the GPO_Gx and GPO_Fx pins?,"General-purpose digital output balls (gain and filter versions), active high 1.8V logic, that can be left floating if unused but should not be grounded."
+117,Pinout,What is the CM_REF pin used for?,"I/Q Baseband Common-Mode Reference Voltage Input; it can float when the internal common-mode reference is used, or be driven externally with a decoupling capacitor when setting VOCM externally."
+118,Pinout,How should GND balls be handled on the PCB?,All GND balls should be tied together to a low-impedance ground plane on the PCB.
+119,Theory,What are the steps to power up and initialize the ADMV1455?,"Ensure all digital logic inputs are low, power on all supply voltages simultaneously with a rise time of 1ms or longer, set RST high once supplies are stable, program the NVM load instructions, program the necessary registers, and finally set CEN high."
+120,Theory,What are the two power-down options for the ADMV1455?,"A full power-down that removes all power from the chip, and a chip-disable mode using CEN that puts the chip into a low-power mode while supplies remain on."
+121,Theory,How do you fully power down the ADMV1455 in an ordered fashion?,"Set CEN to logic low, set all other logic inputs to logic low, then power off all supply voltages."
+122,Theory,How is the chip disabled without removing supply power?,"By bringing CEN to logic level low, which powers off most of the RF circuits within the chip while supplies remain on."
+123,Theory,What SPI configurations does the ADMV1455 support?,Both 3-wire and 4-wire SPI configurations.
+124,Theory,What are the SPI digital inputs on the ADMV1455?,"CHIP_ADD0, CHIP_ADD1, SCLK, and CS."
+125,Theory,"How many bits make up a single SPI communications frame, and how are they divided?",24 bits total: a 16-bit header followed by 8 bits of data.
+126,Theory,What does the R/W bit in the SPI header control?,Set to 0 for a write operation and set to 1 for a read operation.
+127,Theory,What does the broadcast (BR) bit in the SPI header do?,"When set to 1, it causes all chips regardless of chip address to respond to the SPI instruction; it must be 0 for single-chip instructions and must be 0 for all read operations."
+128,Theory,How can up to four ADMV1455 chips share the same SPI bus?,"Using the CHIP_ADD0 and CHIP_ADD1 address inputs, which set a unique chip address so multiple chips can share SCLK, SDIO, SDO, and CS connections."
+129,Theory,What is the default SPI register addressing order?,"Descending addresses by default, though ascending order can be configured via Register 0x000."
+130,Theory,What is SPI streaming on the ADMV1455?,"A mode where CS is asserted low, a single 16-bit header instruction is given, followed by multiple bytes of data, and then CS is deasserted, minimizing SPI instruction time."
+131,Theory,What happens if CS is deasserted during a data portion of a SPI streaming instruction?,"That data is ignored; for streaming operations, complete bytes of data are accepted but a partial byte is ignored."
+132,Theory,What is the purpose of the Filter LUT and Gain LUT?,They store pre-programmed filter and gain settings that can be quickly selected via SPI or the ADD_Fx/ADD_Gx pins to support fast frequency-hopping and gain-switching applications.
+133,Theory,What does the Synchronous LOAD feature do?,It allows filter and gain register contents to be loaded into the working registers synchronously when the LOAD pin transitions from low to high.
+134,Registers,What is the reset value and access type of Register 0x000 (REG0000)?,"Reset value 0x00, and it is read/write (R/W)."
+135,Registers,What information is stored in Register 0x004?,"PRODUCT_ID[7:0], the lower byte of the product ID, with a reset/read value of 0x66 and read-only access."
+136,Registers,What is Register 0x00A used for?,"It contains the SCRATCH_PAD field, a read/write scratch register with a reset value of 0x00."
+137,Registers,What does Register 0x040 provide?,"ADC_TEMP_SENSOR_READBACK, a read-only field for reading back the on-chip temperature sensor via the ADC."
+138,Registers,What does Register 0x041 provide?,"ADC_DETECTOR_READBACK, a read-only field for reading back the power detector value via the ADC."
+139,Registers,What bit field does Register 0x108 contain?,"OVERLOAD_PROTECTION_MODE, a read/write field with a reset value of 0x00."
+140,Registers,What is stored in Register 0x172?,"LNA_OVERLOAD_THRESHOLD, a read/write field with a reset value of 0x0F."
+141,Registers,What is stored in Register 0x173?,"DSA1_OVERLOAD_THRESHOLD, a read/write field with a reset value of 0x0F."
+142,Registers,What does Register 0x18A control?,"BB_VOCM_SEL, a read/write bit with reset value 0x01, used for baseband common-mode voltage selection."
+143,Registers,"What is the reset value of Register 0x194, and what does it control?","Reset value 0x03; it contains BB_I_GAIN_SEL and BB_Q_GAIN_SEL, used to select baseband I and Q gain settings."
+144,Registers,What does Register 0x200 (FILTER_SM_STEP) control?,"The filter state machine step setting, read/write, with a reset value of 0x01."
+145,Registers,What does Register 0x202 control?,"FILTER_LUT_EN, which enables the filter look-up table; it is read/write with a reset value of 0x01."
+146,Registers,What is stored in Register 0x205?,"FILTER_SM_POINTER, a read-only field indicating the filter state machine pointer, reset value 0x00."
+147,Registers,What register range is used for the filter look-up table (Filter LUT A/B)?,"Register 0x900 to Register 0xE03 contains the filter LUT entries, with Filter LUT A Index 1 through Filter LUT B Index 31 sharing the same bit-field structure as the base entry."
+148,Registers,What register range is used for the gain look-up table (Gain LUT)?,"Register 0xE00 to Register 0xF0B, with Gain LUT Index 1 to Index 66 sharing the same bit-field structure as Gain LUT Index 0."
+149,Registers,What does bit field GPO_G_LUT_0 in Register 0xE03 control?,"It sets the logic state of the GPO_G general-purpose outputs for LUT index 0; it is a read/write field occupying bits [4:0], reset value 0x0."
+150,Registers,How wide is a register address field in the ADMV1455 SPI header?,12 register address bits.
+151,Applications,What ordering options are available for the ADMV1455?,"ADMV1455BBCZ (pocket tape packing) and ADMV1455BBCZ-R7 (reel of 500), both in the 120-ball CSP_BGA package, rated -40°C to +95°C."
+152,Applications,What does the 'Z' suffix mean in the ADMV1455 part number?,It indicates a RoHS-compliant part.
+153,Applications,What package drawing option and description correspond to the ADMV1455?,"Package drawing option BC-120-4, described as a 120-ball Chip Scale Package Ball Grid Array (CSP_BGA)."
+154,Applications,What packing quantity is provided for the ADMV1455BBCZ-R7 option?,Reel of 500 units.

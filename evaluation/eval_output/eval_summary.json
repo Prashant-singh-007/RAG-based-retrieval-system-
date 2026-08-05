@@ -1,0 +1,70 @@
+{
+  "overall": {
+    "n": 154,
+    "avg_token_f1": 0.2917298701298701,
+    "avg_token_precision": 0.23284285714285713,
+    "avg_token_recall": 0.5200551948051948,
+    "exact_match_rate": 0.0,
+    "avg_context_match_rate": 0.6843642857142858,
+    "avg_llm_judge_score": 0.7584415584415585,
+    "avg_latency_sec": 6.365064935064935
+  },
+  "per_category": {
+    "General": {
+      "n": 22,
+      "avg_token_f1": 0.4255227272727273,
+      "exact_match_rate": 0.0,
+      "avg_context_match_rate": 0.8000863636363637,
+      "avg_llm_judge_score": 0.7636363636363637
+    },
+    "Specifications": {
+      "n": 39,
+      "avg_token_f1": 0.16362051282051282,
+      "exact_match_rate": 0.0,
+      "avg_context_match_rate": 0.5288205128205128,
+      "avg_llm_judge_score": 0.7999999999999999
+    },
+    "Timing": {
+      "n": 11,
+      "avg_token_f1": 0.20311818181818184,
+      "exact_match_rate": 0.0,
+      "avg_context_match_rate": 0.6804454545454545,
+      "avg_llm_judge_score": 0.8181818181818182
+    },
+    "AbsMax": {
+      "n": 21,
+      "avg_token_f1": 0.15971428571428573,
+      "exact_match_rate": 0.0,
+      "avg_context_match_rate": 0.6031809523809524,
+      "avg_llm_judge_score": 0.8476190476190476
+    },
+    "Pinout": {
+      "n": 25,
+      "avg_token_f1": 0.442792,
+      "exact_match_rate": 0.0,
+      "avg_context_match_rate": 0.833752,
+      "avg_llm_judge_score": 0.7120000000000001
+    },
+    "Theory": {
+      "n": 15,
+      "avg_token_f1": 0.4687266666666667,
+      "exact_match_rate": 0.0,
+      "avg_context_match_rate": 0.8630266666666666,
+      "avg_llm_judge_score": 0.7066666666666667
+    },
+    "Registers": {
+      "n": 17,
+      "avg_token_f1": 0.23604117647058823,
+      "exact_match_rate": 0.0,
+      "avg_context_match_rate": 0.6043764705882353,
+      "avg_llm_judge_score": 0.611764705882353
+    },
+    "Applications": {
+      "n": 4,
+      "avg_token_f1": 0.3705,
+      "exact_match_rate": 0.0,
+      "avg_context_match_rate": 0.737725,
+      "avg_llm_judge_score": 0.8
+    }
+  }
+}
