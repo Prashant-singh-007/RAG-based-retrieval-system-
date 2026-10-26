@@ -76,9 +76,15 @@ def _invoke(llm, prompt_text, image_paths=None):
     HumanMessage) when figures were extracted for this datasheet."""
     if image_paths:
         content = build_multimodal_content(prompt_text, image_paths)
-        response = llm.invoke([HumanMessage(content=content)])
-    else:
-        response = llm.invoke(prompt_text)
+        try:
+            response = llm.invoke([HumanMessage(content=content)])
+            return response.content
+        except Exception as e:
+            # Text-only model: retry without images instead of failing.
+            if "multimodal" not in str(e).lower():
+                raise
+            print("Model does not support images - falling back to text-only.")
+    response = llm.invoke(prompt_text)
     return response.content
 
 

@@ -188,9 +188,18 @@ class RAGPipeline:
         HumanMessage) when the retrieved chunks reference extracted figures."""
         if image_paths:
             content = build_multimodal_content(prompt_text, image_paths)
-            response = self.llm.invoke([HumanMessage(content=content)])
-        else:
-            response = self.llm.invoke(prompt_text)
+            try:
+                response = self.llm.invoke([HumanMessage(content=content)])
+                return response.content
+            except Exception as e:
+                # Text-only models (e.g. plain llama3.2) reject image input
+                # with "does not support multimodal requests". Fall back to
+                # text-only so the answer still works; use a vision model
+                # (e.g. llama3.2-vision) to actually analyze the figures.
+                if "multimodal" not in str(e).lower():
+                    raise
+                print("Model does not support images - falling back to text-only.")
+        response = self.llm.invoke(prompt_text)
         return response.content
 
     # ---- Section 3.3.1: Direct Question Answering mode ----
